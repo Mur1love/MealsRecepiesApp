@@ -1,4 +1,4 @@
-# meals
+# MealsRecipiesApp
 
 A new Flutter project.
 
