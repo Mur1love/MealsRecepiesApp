@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:meals/screens/meal_detail_screen.dart';
 import 'screens/category_screen.dart';
 import 'screens/categories_meals_screen.dart';
+import 'utils/app_routes.dart';
 
 void main() => runApp(const MyApp());
 
@@ -13,8 +15,8 @@ class MyApp extends StatelessWidget {
       title: 'Vamos Cozinhar?',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(
-          primarySwatch: Colors.pink, 
-          accentColor: Colors.amber, 
+          primarySwatch: Colors.pink,
+          accentColor: Colors.amber,
         ),
         canvasColor: const Color.fromRGBO(255, 254, 229, 1),
         textTheme: const TextTheme(
@@ -24,9 +26,10 @@ class MyApp extends StatelessWidget {
           ), // Exemplo de configuração de estilo de texto
         ),
       ),
-      home: const CategoriesScreen(),
       routes: {
-        '/categories-meals': (ctx) => CategoriesMealsScreen(),
+        AppRoutes.HOME: (ctx) => const CategoriesScreen(),
+        AppRoutes.CATEGORIES_MEALS: (ctx) => const CategoriesMealsScreen(),
+        AppRoutes.MEAL_DETAIL: (context) => const MealDetailScreen(),
       },
     );
   }
