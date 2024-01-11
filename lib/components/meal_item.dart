@@ -3,7 +3,7 @@ import 'package:meals/models/meal.dart';
 import 'package:meals/utils/app_routes.dart';
 
 class MealItem extends StatelessWidget {
-  const MealItem({super.key, required this.meal});
+  const MealItem(Meal favouriteMeal, {super.key, required this.meal});
 
   final Meal meal;
 
